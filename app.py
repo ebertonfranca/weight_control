@@ -29,10 +29,10 @@ plt.plot(df['Data'], df['Arlete'], linestyle='-', color='#F857C1', label=f"Arlet
 
 # Adicionar os valores dos pesos e diferença nos pontos
 for i in range(len(df)):
-    plt.text(df['Data'][i], df['Éberton'][i] + 0.2, f"{df['Éberton'][i]}kg", ha='center', fontsize=10, color='black', fontweight='bold')
-    plt.text(df['Data'][i], df['Arlete'][i] + 0.2, f"{df['Arlete'][i]}kg", ha='center', fontsize=10, color='black', fontweight='bold')
-    plt.text(df['Data'][i], df['Éberton'][i] - 1, f"Dif: {df['Diferença Éberton'][i]:.1f}kg", ha='center', fontsize=10, color='green' if df['Diferença Éberton'][i] < 0 else 'red')
-    plt.text(df['Data'][i], df['Arlete'][i] - 1, f"Dif: {df['Diferença Arlete'][i]:.1f}kg", ha='center', fontsize=10, color='green' if df['Diferença Arlete'][i] < 0 else 'red')
+    plt.text(df['Data'][i], df['Éberton'][i] + 0.5, f"{df['Éberton'][i]}kg", ha='center', fontsize=10, color='black', fontweight='bold')
+    plt.text(df['Data'][i], df['Arlete'][i] + 0.5, f"{df['Arlete'][i]}kg", ha='center', fontsize=10, color='black', fontweight='bold')
+    plt.text(df['Data'][i], df['Éberton'][i] - 0.5, f"Dif: {df['Diferença Éberton'][i]:.1f}kg", ha='center', fontsize=10, color='green' if df['Diferença Éberton'][i] < 0 else 'red')
+    plt.text(df['Data'][i], df['Arlete'][i] - 0.5, f"Dif: {df['Diferença Arlete'][i]:.1f}kg", ha='center', fontsize=10, color='green' if df['Diferença Arlete'][i] < 0 else 'red')
 
 # Configurações do gráfico
 plt.title('Gráfico Diário de Peso com Diferença e Soma Total na Legenda', fontsize=16, fontweight='bold')
