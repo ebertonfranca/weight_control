@@ -3,9 +3,9 @@ import pandas as pd
 
 # Dados de exemplo
 data = {
-    "Data": ["12/08/2024", "13/08/2024", "14/08/2024", "15/08/2024"],
-    "Éberton": [93.4, 91.9, 90.7, 90.4],
-    "Arlete": [99.6, 97.9, 97.6, 97.7]
+    "Data": ["12/08/2024", "13/08/2024", "14/08/2024", "15/08/2024", "16/08/2024", "17/08/2024" ],
+    "Éberton": [93.4, 91.9, 90.7, 90.4, 90.4, 90.0],
+    "Arlete": [99.6, 97.9, 97.6, 97.7, 97.1, 96.9]
 }
 
 # Criar um DataFrame
@@ -35,7 +35,7 @@ for i in range(len(df)):
     plt.text(df['Data'][i], df['Arlete'][i] - 0.5, f"Dif: {df['Diferença Arlete'][i]:.1f}kg", ha='center', fontsize=10, color='green' if df['Diferença Arlete'][i] < 0 else 'red')
 
 # Configurações do gráfico
-plt.title('Gráfico Diário de Peso com Diferença e Soma Total na Legenda', fontsize=16, fontweight='bold')
+plt.title('Gráfico Diário de Peso em Kg', fontsize=16, fontweight='bold')
 plt.xlabel('Data', fontsize=12)
 plt.ylabel('Peso (kg)', fontsize=12)
 plt.xticks(df['Data'], df['Data'].dt.strftime('%d/%m/%Y'), fontsize=10)
